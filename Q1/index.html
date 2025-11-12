@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Selector Assignment</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif; 
+            box-sizing: border-box; 
+        }
+        #header {
+            background-color: #333; 
+            color: white; 
+        }
+        .nav-link {
+            color: white; 
+            font-size: 16px; 
+            text-decoration: none; 
+            padding: 10px 15px; 
+            display: inline-block; 
+        } 
+        .nav-link:hover {
+            color: #ff9900; 
+        }
+        .nav-list li:first-child .nav-link {
+            font-weight: bold; 
+            background-color: #222; 
+            border-right: 1px solid #444; 
+        }
+        #header,
+        #footer {
+            margin: 10px 0; 
+            padding: 15px 20px; 
+            text-align: center; 
+        }
+        nav {
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            max-width: 1000px;
+            margin: 0 auto; 
+        }
+        .nav-list {
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+            display: flex; 
+        }
+        .logo {
+            font-size: 24px;
+            color: white;
+            padding: 0 15px; 
+        }
+        .buy-theme {
+            color:  #007bff; 
+            padding: 10px 15px;
+            margin-left: 20px;
+        }
+        #footer {
+            background-color: #eee;
+            color: #333;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="logo"><span style="color:#007bff;font-weight: bold;">Be</span>blog</div>
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Web design</a></li>
+                <li><a href="#" class="nav-link">WordPress</a></li>
+                <li><a href="#" class="nav-link">About us</a></li>
+                <li><a href="#" class="nav-link">BeAdvice</a></li>
+            </ul>
+            <a href="#" class="nav-link buy-theme">Buy BeTheme</a>
+        </nav>
+    </header>
+</body>
+</html>
