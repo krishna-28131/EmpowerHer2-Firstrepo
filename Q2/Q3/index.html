@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Course Box Using Combinators</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            padding: 40px 20px;
+        }
+        #course-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .course-card {
+            background-color: white;
+            flex: 1 1 300px; 
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .course-card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .red-card {
+            background-color: #ff0033;
+            color: white;
+            border: none;
+        }
+        .course-card .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; 
+            min-height: 50px;
+        }
+        .course-card .header .icon-placeholder {
+            width: 40px; 
+            height: 40px; 
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-right: 15px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #555;
+            flex-shrink: 0;
+        }
+        .red-card .header .icon-placeholder {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .course-card .institute {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .red-card .institute {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .course-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 15px; 
+            min-height: 70px;
+        }
+        .course-card .details > p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .red-card .details > p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .course-card .qualifier-test,
+        .red-card .qualifier-test {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .red-card .qualifier-test {
+            color: white;
+        }
+
+        .course-card .footer {
+            display: flex;
+            gap: 10px;
+            padding-top: 15px; 
+        }
+        .course-card .footer a {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+            padding: 10px 5px; 
+        }
+        .learn-more {
+            background-color: #d10031;
+            color: white;
+        }
+        
+        .learn-more:hover {
+            background-color: #a30027;
+        }
+
+        .brochure {
+            background-color: transparent;
+            color: #d10031;
+            border: 1px solid #d10031;
+        }
+        
+        .brochure:hover {
+            background-color: #ffdce5;
+        }
+        .red-card .learn-more {
+            background-color: white;
+            color: #ff0033;
+        }
+        
+        .red-card .learn-more:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .red-card .brochure {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .course-card:hover {
+            background-color: #d10031;
+        }
+        
+        .arrow-icon {
+            margin-left: 5px;
+        }
+        img{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="course-container">
+        
+        <div class="course-card">
+            <div class="header">
+                <div class="icon-placeholder">
+                    <img src="https://cdn.masaischool.com/masai-website/iim-sirmur-logo.png"alt="image logo"width="80px">
+                </div>
+            </div>
+              <p class="institute">IIM Sirmaur</p>
+            <h3>EDGE: Essentials of Data Analytics, Gen AI & Execution</h3>
+            <div class="details">
+                <p>06 months | Online</p>
+                <p class="qualifier-test">Qualifier test - 12th Nov 2025</p>
+            </div>
+            <div class="footer">
+                <a href="#" class="learn-more">Learn more <span class="arrow-icon">&rarr;</span></a>
+                <a href="#" class="brochure">Brochure <span class="arrow-icon">&rarr;</span></a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="header">
+                <div class="icon-placeholder">
+                     <img src="https://cdn.masaischool.com/masai-website/logo_bf6e1a44a4.png"alt="image logo"width="80px">
+                </div>
+            </div>
+             <p class="institute">Vishlesan I-Hub IIT Patna</p>
+            <h3>Product Management and Agentic AI</h3>
+            <div class="details">
+                <p>06 months | Online</p>
+                <p class="qualifier-test">Qualifier test - 12th Nov 2025</p>
+            </div>
+            <div class="footer">
+                <a href="#" class="learn-more">Learn more <span class="arrow-icon">&rarr;</span></a>
+                <a href="#" class="brochure">Brochure <span class="arrow-icon">&rarr;</span></a>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <div class="header">
+                <div class="icon-placeholder">
+                     <img src="https://cdn.masaischool.com/masai-website/logo_bf6e1a44a4.png"alt="image logo"width="80px">
+                </div>
+            </div>
+            <p class="institute">Vishlesan I-Hub IIT Patna</p>
+            <h3>Certification Program in Data Analytics with Gen & Agentic AI</h3>
+            <div class="details">
+                <p>06 months | Online</p>
+                <p class="qualifier-test">Qualifier test - 8th Nov 2025</p>
+            </div>
+            <div class="footer">
+                <a href="#" class="learn-more">Learn more <span class="arrow-icon">&rarr;</span></a>
+                <a href="#" class="brochure">Brochure <span class="arrow-icon">&rarr;</span></a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="header">
+                <div class="icon-placeholder">
+                     <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/image143_ezgif_com_png_to_webp_converter_a1df79a8e9.webp"alt="image logo"width="60px">
+                </div>
+            </div>
+                    <p class="institute">IIM Trichy</p>
+            <h3>Product Management in the Agentic AI Era</h3>
+            <div class="details">
+                <p>06 months | Online</p>
+                <p class="qualifier-test">Qualifier test - 12th Nov 2025</p>
+            </div>
+            <div class="footer">
+                <a href="#" class="learn-more">Learn more <span class="arrow-icon">&rarr;</span></a>
+                <a href="#" class="brochure">Brochure <span class="arrow-icon">&rarr;</span></a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="header">
+                <div class="icon-placeholder">
+                     <img src="https://cdn.masaischool.com/masai-website/ihubdivyasamparklogo1_ezgif_com_png_to_webp_converter_b2368a1f9d.webp"alt="image logo"width="60px">
+                </div>
+            </div>
+             <p class="institute">IHUB DivyaSampark, IIT Roorkee</p>
+            <h3>Future-Ready Product Management with Applied AI Program</h3>
+            <div class="details">
+                <p>6 months | Online</p>
+                <p class="qualifier-test">Qualifier test - 12th Nov 2025</p>
+            </div>
+            <div class="footer">
+                <a href="#" class="learn-more">Learn more <span class="arrow-icon">&rarr;</span></a>
+                <a href="#" class="brochure">Brochure <span class="arrow-icon">&rarr;</span></a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="header">
+                <div class="icon-placeholder">
+                     <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/p_logo_ezgif_com_png_to_webp_converter_7a4fd3bf2e.webp"alt="image logo"width="90px">
+                </div>
+            </div>
+              <p class="institute">NMIMS CODE</p>
+            <h3>Online MBA</h3>
+            <div class="details">
+                <p>02 Years | Online</p>
+                <p class="qualifier-test">Qualifier test - 12th Nov 2025</p>
+            </div>
+            <div class="footer">
+                <a href="#" class="learn-more">Learn more <span class="arrow-icon">&rarr;</span></a>
+                <a href="#" class="brochure">Brochure <span class="arrow-icon">&rarr;</span></a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
