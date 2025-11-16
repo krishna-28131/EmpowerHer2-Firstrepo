@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masai Calculator</title>
+  <style>
+.box {
+  box-sizing: border-box;
+  margin: 10;
+  padding: 20;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+h1 {
+  font-size: 30px;
+  color:  rgb(25, 169, 150);
+  margin-bottom: 40px;
+}
+
+.calculator {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  text-align: right;
+  background-color: white;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+.operator {
+  background-color: #333;
+  color: white;
+}
+
+.operator:hover {
+  background-color: black;
+}
+
+.clear {
+  background-color: red;
+  color: white;
+}
+
+.clear:hover {
+  background-color: red;
+}
+  </style>
+  </head>
+  <body>
+    <h1>Masai Calculator</h1>
+    <div class="calculator">
+      <input type="text" class="display" disabled>
+      <div class="buttons">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn operator">+</button>
+        
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn operator">-</button>
+        
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn operator">x</button>
+        
+        <button class="btn clear">C</button>
+        <button class="btn">0</button>
+        <button class="btn operator">=</button>
+        <button class="btn operator">/</button>
+      </div>
+    </div>
+  </body>
+  </html>
