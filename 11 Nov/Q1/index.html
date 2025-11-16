@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grid Layout</title>
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px); 
+    gap: 5px; 
+    width: 450px; 
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+
+.grid-item:nth-child(1) { 
+    background-color: #ff4500; 
+}
+.grid-item:nth-child(2) { 
+    background-color: #4169e1;
+}
+.grid-item:nth-child(3) { 
+    background-color: #ffd700;
+}
+
+
+.grid-item:nth-child(4) {
+    background-color: #8a2be2;
+}
+.grid-item:nth-child(5) {
+    background-color: #3cb371;
+}
+.grid-item:nth-child(6) { 
+    background-color: #00ced1;
+}
+
+
+.grid-item:nth-child(7) { 
+    background-color: #fa8072;
+}
+.grid-item:nth-child(8) { 
+    background-color: #483d8b;
+}
+.grid-item:nth-child(9) { 
+    background-color: #8b0000;
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">2.</div>
+        <div class="grid-item">3.</div>
+        <div class="grid-item">4.</div>
+        <div class="grid-item">5.</div>
+        <div class="grid-item">6.</div>
+        <div class="grid-item">1.</div> 
+        <div class="grid-item">7.</div>
+        <div class="grid-item">8.</div>
+        <div class="grid-item">9.</div>
+    </div>
+</body>
+</html>
