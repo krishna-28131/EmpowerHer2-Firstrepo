@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase Box</title>
+    <style>
+        .mainbox {
+            width: 300px;
+            margin:auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 20px;
+        }
+
+        #watch_img {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .img_div {
+            margin: 0 auto;
+            width: 200px;
+            /* border: 1px solid rgb(223, 38, 69); */
+        }
+
+        button {
+            background-color: green;
+            color: #fff;
+            padding: 3px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #rating_div {
+            display: flex;
+            margin:auto;
+            gap: 10px;
+            height: 30px;
+            align-items: center;
+        }
+
+        #price_div {
+            display: flex;
+            margin:auto;
+            gap: 10px;
+            height: 30px;
+            align-items: center;
+        }
+        #description_div{
+            /* border:1px solid red; */
+            margin:auto;
+        }
+        #addcart{
+            margin:auto;
+            padding:5px;
+            background-color: rgb(63, 206, 224);
+            color:#fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+        <div  style="text-align: right;" class="heart">🩶</div>
+        <div class="img_div">
+            <img id="watch_img"
+                Src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/w/x/h/-original-imahfa7xspmxemvj.jpeg"
+                alt="watch img">
+        </div>
+        <div id="description_div">
+            <h3 style="font-weight:600;">SAMSUNG Galaxy watch</h3>
+           <h4 style="color: gray;">Graphite Strap,44mm</h4>
+            
+           <!-- rating_div -->
+            <div id="Rating div">
+                <button>4.3 <span style="font-size:24px;">⋆</span></button>
+                <h4 style="color:gray;">(973)</h4>
+                <img width="100px"
+                    src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
+                    alt="f_logo">
+            </div>
+            <!-- rating_div -->
+
+            <!-- price_div -->
+            <div id="Price_div">
+                <h2>Rs 18,999</h2>
+                <h3 style="color:gray; text-decoration: line-through;">Rs 41,999</h3>
+                <h2 style="color: green">54% off</h2>
+            </div>
+            <h3 style="color: green; margin-top: -2px;">Bank offers</h3>
+        </div>
+    <button id="addcart">ADD TO CART</button>
+    </div>
+
+
+</body>
+
+</html>
