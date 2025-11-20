@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">MyPortfolio</div>
+
+      <!-- Mobile Menu Toggle -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero container">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Krishna Tiwari</span></h1>
+      <p>I build clean, responsive websites using HTML & CSS.</p>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <h2>About Me</h2>
+    <p>
+      I’m a web developer who enjoys building responsive, modern interfaces
+      with clean HTML and CSS. I focus on performance, accessibility, and
+      simplicity.
+    </p>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills container">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">JavaScript Basics</div>
+      <div class="skill-card">Version Control (Git)</div>
+      <div class="skill-card">UI Design Basics</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
+    <h2>Contact</h2>
+    <p>Email me at: <a href="krishnapurohit417400@email.com">krishnapurohit417400@email.com</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span>Krishna Tiwari</p>
+      <div class="socials">
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
