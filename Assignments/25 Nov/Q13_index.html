@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q13 - Interactive DOM Manipulation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 300px;
+            padding: 15px;
+            background-color: lightgray;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 250px;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: yellow;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Q13 - Interactive DOM Manipulation</h2>
+
+    <input type="text" id="colorInput" placeholder="Enter a color name">
+    <br>
+    <input type="text" id="textInput" placeholder="Enter text here">
+    <br>
+    <button id="changeBgBtn">Change Background</button>
+    <button id="updateTextBtn">Update Text</button>
+
+    <div id="box">This is the initial text inside the div.</div>
+
+    <script src="Q13_script.js"></script>
+</body>
+</html>
