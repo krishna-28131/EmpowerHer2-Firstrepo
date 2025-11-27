@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugging Task</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      margin-top: 10px;
+      border: 1px solid #aaa;
+    }
+  </style>
+
+</head>
+<body>
+
+  <p id="message">This is the original message before clicking the button.</p>
+
+  <button id="textButton">Change Text</button>
+
+  <br><br>
+
+  <div id="box"></div>
+  <button id="colorButton">Change Background</button>
+
+  <script>
+    const para = document.querySelector('#message');  
+    const textButton = document.getElementById('textButton');  
+
+    textButton.addEventListener('click', () => {  
+      para.textContent = 'New Message';  
+    });
+
+    const box = document.getElementById('box');
+    const colorButton = document.getElementById('colorButton');
+
+    colorButton.addEventListener('click', () => {
+      box.style.backgroundColor = 'blue';  
+    });
+  </script>
+
+</body>
+</html>
+
