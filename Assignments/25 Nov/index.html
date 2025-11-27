@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DOM Practice</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Q12 - Basic DOM Manipulation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1 id="mainHeading">Welcome to the DOM World!
-</h1>
+    <h2>Q12 - Basic DOM Manipulation</h2>
 
-    <p>The Document Object Model (DOM) allows JavaScript to interact with and change the content of a webpage.
-</p>
-    <p>Using the DOM, developers can select elements, modify styles, and dynamically update the entire page.
-</p>
-    <p>This example demonstrates how JavaScript can manipulate headings, paragraphs, and container elements.
-</p>
+    <ul id="myList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
 
-    <div class="container">
-        This is a container div.
-    </div>
+    <button id="addItemBtn">Add Item</button>
 
-    <script src="Q11_index.js"></script>
+    <script src="Q12_index.js"></script>
 </body>
 </html>
