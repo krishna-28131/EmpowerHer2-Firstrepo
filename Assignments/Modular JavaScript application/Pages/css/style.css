@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+}
